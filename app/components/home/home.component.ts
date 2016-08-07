@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
     styleUrls: ['components/home/home.component.css']
 })
 export class HomeComponent {
-    name: string = "Home page";
+    name: string = "Home Page";
     users: {};
 
     constructor(http: Http) {
