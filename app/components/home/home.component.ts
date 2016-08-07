@@ -7,9 +7,10 @@ import 'rxjs/add/operator/map';
     templateUrl: 'components/home/home.component.html',
     styleUrls: ['components/home/home.component.css']
 })
+
 export class HomeComponent {
-    name: string = "Home Page";
-    users: {};
+    pageName: string = "Home Page";
+    users: any = {};
 
     constructor(http: Http) {
         this.users = http.get("/users").map(data => data.json());

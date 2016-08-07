@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
+/* GET users Listings */
 router.get('/', function(req, res, next) {
   res.json({
-    name: "John",
-    last: "Smith"
+    name: "Daniel",
+    last: "Lim"
   });
 });
 
