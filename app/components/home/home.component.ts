@@ -10,7 +10,7 @@ import 'rxjs/add/operator/map';
 
 export class HomeComponent {
     pageName: string = "Home Page";
-    users: any = {};
+    users = {};
 
     constructor(http: Http) {
         this.users = http.get("/users").map(data => data.json());

@@ -10,3 +10,11 @@ public/ng2
 *.ipr
 
 private-readme.md
+x-node_modules/
+
+/4me
+.privates
+
+yarn-error.log
+npm-debug.log
+
