@@ -4,7 +4,7 @@ import { HTTP_PROVIDERS } from "@angular/http";
 import { AppComponent } from './app.component'
 import { APP_ROUTER_PROVIDERS } from "./routes";
 
-bootstrap(<Type>AppComponent, [
+bootstrap(AppComponent, [
     HTTP_PROVIDERS,
     APP_ROUTER_PROVIDERS
 ]);

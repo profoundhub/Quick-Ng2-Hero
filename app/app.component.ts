@@ -2,23 +2,14 @@ import { Component } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 
 @Component({
-    directives: [ROUTER_DIRECTIVES],
-    providers: [Location],
+    moduleId: module.id,
     selector: 'my-app',
-    styles: [`h1 {
-	color: white;
-	background: darkgray;
-	padding: 20px;
-}
-`],
-    template: `
-<h1>My First {{name}} app</h1>
-<router-outlet></router-outlet>
-
-<a [routerLink]="['/']">Home</a> | <a [routerLink]="['/about']">About</a>`,
+    styleUrls: ['./app.component.css'],
+    templateUrl: './app.component.html',
+    directives: [ ROUTER_DIRECTIVES ],
+    providers: [ Location ]
 })
-export class AppComponent {
-    name: string = "Angular 2 on Express";
 
-    constructor() {}
+export class AppComponent {
+    pageHeader: string = "Angular 2 Hero";
 }

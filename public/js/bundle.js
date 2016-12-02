@@ -492,14 +492,15 @@ $__System.registerDynamic("b", ["5", "c"], true, function($__require, exports, m
   var router_1 = $__require('c');
   var AppComponent = (function() {
     function AppComponent() {
-      this.name = "Angular 2 on Express";
+      this.pageHeader = "Angular 2 Hero";
     }
     AppComponent = __decorate([core_1.Component({
-      directives: [router_1.ROUTER_DIRECTIVES],
-      providers: [Location],
+      moduleId: module.id,
       selector: 'my-app',
-      styles: ["h1 {\n\tcolor: white;\n\tbackground: darkgray;\n\tpadding: 20px;\n}\n"],
-      template: "\n<h1>My First {{name}} app</h1>\n<router-outlet></router-outlet>\n\n<a [routerLink]=\"['/']\">Home</a> | <a [routerLink]=\"['/about']\">About</a>"
+      styleUrls: ['./app.component.css'],
+      templateUrl: './app.component.html',
+      directives: [router_1.ROUTER_DIRECTIVES],
+      providers: [Location]
     }), __metadata('design:paramtypes', [])], AppComponent);
     return AppComponent;
   }());
@@ -30501,7 +30502,8 @@ $__System.registerDynamic("4b", ["5", "49", "44"], true, function($__require, ex
   $__require('44');
   var HomeComponent = (function() {
     function HomeComponent(http) {
-      this.name = "Home Page";
+      this.pageName = "Home Page";
+      this.users = {};
       this.users = http.get("/users").map(function(data) {
         return data.json();
       });
@@ -39054,9 +39056,10 @@ $__System.registerDynamic("52", ["5"], true, function($__require, exports, modul
   var core_1 = $__require('5');
   var AboutComponent = (function() {
     function AboutComponent() {
-      this.name = "About Us";
+      this.pageName = "About Us";
     }
     AboutComponent = __decorate([core_1.Component({
+      moduleId: module.id,
       selector: 'my-about',
       templateUrl: 'components/about/about.component.html',
       styleUrls: ['components/about/about.component.css']
